@@ -1,0 +1,38 @@
+{
+  "item.tutorialmod.bismuth": "Bismuth",
+  "item.tutorialmod.raw_bismuth": "Raw Bismuth",
+
+  "item.tutorialmod.chisel": "Chisel",
+
+  "item.tutorialmod.radish": "Radish",
+  "item.tutorialmod.starlight_ashes": "Starlight Ashes",
+  "item.tutorialmod.frostfire_ice": "Frostfire Ice",
+
+  "block.tutorialmod.bismuth_block": "Block of Bismuth",
+  "block.tutorialmod.bismuth_ore": "Bismuth Ore",
+  "block.tutorialmod.deepslate_bismuth_ore": "Deepslate Bismuth Ore",
+
+  "block.tutorialmod.bismuth_stairs": "Bismuth Stairs",
+  "block.tutorialmod.bismuth_slab": "Bismuth Slab",
+
+  "block.tutorialmod.bismuth_pressure_plate": "Bismuth Pressure Plate",
+  "block.tutorialmod.bismuth_button": "Bismuth Button",
+
+  "block.tutorialmod.bismuth_fence": "Bismuth Fence",
+  "block.tutorialmod.bismuth_fence_gate": "Bismuth Fence Gate",
+  "block.tutorialmod.bismuth_wall": "Bismuth Wall",
+
+  "block.tutorialmod.bismuth_door": "Bismuth Door",
+  "block.tutorialmod.bismuth_trapdoor": "Bismuth Trapdoor",
+
+  "block.tutorialmod.magic_block": "Magic Block",
+
+  "block.tutorialmod.bismuth_lamp": "Bismuth Lamp",
+
+  "creativetab.tutorialmod.tutorial_items": "Tutorial Items",
+  "creativetab.tutorialmod.tutorial_blocks": "Tutorial Blocks",
+
+  "tooltip.tutorialmod.magic_block": "This block is very §9MAGICAL§r",
+  "tooltip.tutorialmod.chisel": "Press §eShift§r for more information",
+  "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks"
+}
