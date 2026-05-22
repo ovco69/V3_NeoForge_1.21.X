@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "tutorialmod:bismuth"
+    "B": {
+      "item": "tutorialmod:bismuth_block"
     }
   },
   "pattern": [
-    "###",
-    "###"
+    "BBB",
+    "BBB"
   ],
   "result": {
     "count": 6,

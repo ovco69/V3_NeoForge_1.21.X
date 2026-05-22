@@ -66,7 +66,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("bismuth")
                 .unlockedBy("has_bismuth", has(ModItems.BISMUTH))
                 .save(recipeOutput);
-        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_WALL.get(), ModItems.BISMUTH.get());
+        bismuthWall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_WALL.get(), ModBlocks.BISMUTH_BLOCK.get());
 
         doorBuilder(ModBlocks.BISMUTH_DOOR.get(), Ingredient.of(ModItems.BISMUTH))
                 .group("bismuth")
@@ -78,6 +78,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
+    protected static void bismuthWall(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike wall, ItemLike material) {
+        ShapedRecipeBuilder.shaped(recipeCategory, wall, 6)
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', material)
+                .unlockedBy("has_bismuth", has(ModItems.BISMUTH))
+                .save(recipeOutput);
+    }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTime, String pGroup) {
         oreCooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,

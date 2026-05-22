@@ -8,6 +8,6 @@ public class ModFoodProperties {
     public static final FoodProperties RADISH = new FoodProperties.Builder()
             .nutrition(3)
             .saturationModifier(.25f)
-            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST), .35f)
+            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 800), .35f)
             .build();
 }
