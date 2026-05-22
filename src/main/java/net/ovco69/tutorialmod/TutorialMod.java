@@ -1,6 +1,7 @@
 package net.ovco69.tutorialmod;
 
 import net.ovco69.tutorialmod.block.ModBlocks;
+import net.ovco69.tutorialmod.component.ModDataComponents;
 import net.ovco69.tutorialmod.item.ModCreativeModeTabs;
 import net.ovco69.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -46,6 +47,8 @@ public class TutorialMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
