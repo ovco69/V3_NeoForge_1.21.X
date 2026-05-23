@@ -1,11 +1,13 @@
 package net.ovco69.tutorialmod.item;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ovco69.tutorialmod.TutorialMod;
 import net.ovco69.tutorialmod.item.custom.ChiselItem;
+import net.ovco69.tutorialmod.item.custom.HammerItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
@@ -47,6 +49,10 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.BISMUTH, new Item.Properties()
                     .fireResistant()
                     .attributes(HoeItem.createAttributes(ModToolTiers.BISMUTH, 0, -3f))));
+    public static final DeferredItem<HammerItem> BISMUTH_HAMMER = ITEMS.register("bismuth_hammer",
+            () -> new HammerItem(ModToolTiers.BISMUTH, new Item.Properties()
+                    .fireResistant()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.BISMUTH, 7, -3.5f))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

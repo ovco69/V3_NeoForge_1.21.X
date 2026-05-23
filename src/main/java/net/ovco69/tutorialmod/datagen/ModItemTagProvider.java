@@ -30,7 +30,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.SWORDS)
                 .add(ModItems.BISMUTH_SWORD.get());
         tag(ItemTags.PICKAXES)
-                .add(ModItems.BISMUTH_PICKAXE.get());
+                .add(ModItems.BISMUTH_PICKAXE.get())
+                .add(ModItems.BISMUTH_HAMMER.get());
         tag(ItemTags.AXES)
                 .add(ModItems.BISMUTH_AXE.get());
         tag(ItemTags.SHOVELS)
