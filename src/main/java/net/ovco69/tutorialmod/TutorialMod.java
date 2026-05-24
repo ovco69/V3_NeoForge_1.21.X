@@ -1,9 +1,13 @@
 package net.ovco69.tutorialmod;
 
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.ovco69.tutorialmod.block.ModBlocks;
 import net.ovco69.tutorialmod.component.ModDataComponents;
 import net.ovco69.tutorialmod.item.ModCreativeModeTabs;
 import net.ovco69.tutorialmod.item.ModItems;
+import net.ovco69.tutorialmod.util.ModItemProperties;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -65,5 +69,13 @@ public class TutorialMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ModItemProperties.addCustomItemProperties();
+        }
     }
 }

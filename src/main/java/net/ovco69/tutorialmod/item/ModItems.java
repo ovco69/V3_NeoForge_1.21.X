@@ -1,6 +1,7 @@
 package net.ovco69.tutorialmod.item;
 
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -8,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ovco69.tutorialmod.TutorialMod;
 import net.ovco69.tutorialmod.item.custom.ChiselItem;
 import net.ovco69.tutorialmod.item.custom.HammerItem;
+import net.ovco69.tutorialmod.item.custom.ModArmorItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
@@ -53,6 +55,35 @@ public class ModItems {
             () -> new HammerItem(ModToolTiers.BISMUTH, new Item.Properties()
                     .fireResistant()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.BISMUTH, 7, -3.5f))));
+
+    public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.register("bismuth_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+                    .fireResistant()
+                    .durability(ArmorItem.Type.HELMET.getDurability(42))));
+    public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.register("bismuth_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
+                    .fireResistant()
+                    .durability(ArmorItem.Type.CHESTPLATE.getDurability(42))));
+    public static final DeferredItem<ArmorItem> BISMUTH_LEGGINGS = ITEMS.register("bismuth_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
+                    .fireResistant()
+                    .durability(ArmorItem.Type.LEGGINGS.getDurability(42))));
+    public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.register("bismuth_boots",
+            () -> new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
+                    .fireResistant()
+                    .durability(ArmorItem.Type.BOOTS.getDurability(42))));
+
+    public static final DeferredItem<Item> BISMUTH_HORSE_ARMOR = ITEMS.register("bismuth_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties()
+                    .stacksTo(1)));
+
+    public static final DeferredItem<Item> OVCO_SMITHING_TEMPLATE = ITEMS.register("ovco_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "ovco")));
+
+    public static final DeferredItem<Item> BISMUTH_BOW = ITEMS.register("bismuth_bow",
+            () -> new BowItem(new Item.Properties()
+                    .durability(500)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

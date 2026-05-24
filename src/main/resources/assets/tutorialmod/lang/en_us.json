@@ -15,6 +15,16 @@
   "item.tutorialmod.bismuth_hoe": "Bismuth Hoe",
   "item.tutorialmod.bismuth_hammer": "Bismuth Hammer",
 
+  "item.tutorialmod.bismuth_helmet": "Bismuth Helmet",
+  "item.tutorialmod.bismuth_chestplate": "Bismuth Chestplate",
+  "item.tutorialmod.bismuth_leggings": "Bismuth Leggings",
+  "item.tutorialmod.bismuth_boots": "Bismuth Boots",
+
+  "item.tutorialmod.bismuth_horse_armor": "Bismuth Horse Armor",
+  "item.tutorialmod.ovco_armor_trim_smithing_template": "Smithing Template",
+
+  "item.tutorialmod.bismuth_bow": "Bismuth Bow",
+
   "block.tutorialmod.bismuth_block": "Block of Bismuth",
   "block.tutorialmod.bismuth_ore": "Bismuth Ore",
   "block.tutorialmod.deepslate_bismuth_ore": "Deepslate Bismuth Ore",
@@ -41,5 +51,9 @@
 
   "tooltip.tutorialmod.magic_block": "This block is very §9MAGICAL§r",
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more information",
-  "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks"
+  "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
+
+
+  "trim_pattern.tutorialmod.ovco": "Ovco Armor Trim",
+  "trim_material.tutorialmod.bismuth": "Bismuth Material"
 }

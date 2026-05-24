@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "tutorialmod:bismuth"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " BS",
+    "B S",
+    " BS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:bismuth_bow"
+  }
+}

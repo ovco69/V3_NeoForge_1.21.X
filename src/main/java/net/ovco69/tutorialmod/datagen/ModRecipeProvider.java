@@ -1,11 +1,16 @@
 package net.ovco69.tutorialmod.datagen;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.ovco69.tutorialmod.TutorialMod;
 import net.ovco69.tutorialmod.block.ModBlocks;
 import net.ovco69.tutorialmod.item.ModItems;
@@ -76,6 +81,61 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("bismuth")
                 .unlockedBy("has_bismuth", has(ModItems.BISMUTH))
                 .save(recipeOutput);
+
+        helmetItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_HELMET.get(), ModItems.BISMUTH.get());
+        chestplateItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_CHESTPLATE.get(), ModItems.BISMUTH.get());
+        leggingsItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_LEGGINGS.get(), ModItems.BISMUTH.get());
+        bootsItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_BOOTS.get(), ModItems.BISMUTH.get());
+
+        trimSmithing(recipeOutput, ModItems.OVCO_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "ovco"));
+
+        bowItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_BOW, ModItems.BISMUTH.get());
+    }
+
+    private void bowItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike bow, ItemLike material) {
+        ShapedRecipeBuilder.shaped(recipeCategory, bow)
+                .pattern(" BS")
+                .pattern("B S")
+                .pattern(" BS")
+                .define('B', material)
+                .define('S', Items.STRING)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void helmetItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike helmet, ItemLike material) {
+        ShapedRecipeBuilder.shaped(recipeCategory, helmet)
+                .pattern("BBB")
+                .pattern("B B")
+                .define('B', material)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
+                .save(recipeOutput);
+    }
+    protected static void chestplateItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike chestplate, ItemLike material) {
+        ShapedRecipeBuilder.shaped(recipeCategory, chestplate)
+                .pattern("B B")
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', material)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
+                .save(recipeOutput);
+    }
+    protected static void leggingsItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike leggings, ItemLike material) {
+        ShapedRecipeBuilder.shaped(recipeCategory, leggings)
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("B B")
+                .define('B', material)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
+                .save(recipeOutput);
+    }
+    protected static void bootsItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike boots, ItemLike material) {
+        ShapedRecipeBuilder.shaped(recipeCategory, boots)
+                .pattern("B B")
+                .pattern("B B")
+                .define('B', material)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
+                .save(recipeOutput);
     }
 
     protected static void bismuthWall(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike wall, ItemLike material) {
@@ -83,7 +143,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', material)
-                .unlockedBy("has_bismuth", has(ModItems.BISMUTH))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
                 .save(recipeOutput);
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
