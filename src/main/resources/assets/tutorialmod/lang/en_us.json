@@ -25,6 +25,19 @@
 
   "item.tutorialmod.bismuth_bow": "Bismuth Bow",
 
+  "item.tutorialmod.radish_seeds": "Radish Seeds",
+  "item.tutorialmod.goji_berries": "Goji Berries",
+
+  "item.minecraft.potion.effect.slimey_potion": "Potion of Slimey",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Splash Potion of Slimey",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Lingering Potion of Slimey",
+  "item.minecraft.potion.effect.slimey_potion_extended": "Potion of Slimey",
+  "item.minecraft.splash_potion.effect.slimey_potion_extended": "Splash Potion of Slimey",
+  "item.minecraft.lingering_potion.effect.slimey_potion_extended": "Lingering Potion of Slimey",
+
+  "item.tutorialmod.artist_block_music_disc": "Music Disc",
+  "item.tutorialmod.artist_block_music_disc.desc": "St4ticFilms - Artist Block",
+
   "block.tutorialmod.bismuth_block": "Block of Bismuth",
   "block.tutorialmod.bismuth_ore": "Bismuth Ore",
   "block.tutorialmod.deepslate_bismuth_ore": "Deepslate Bismuth Ore",
@@ -46,6 +59,9 @@
 
   "block.tutorialmod.bismuth_lamp": "Bismuth Lamp",
 
+  "block.tutorialmod.radish_crop": "Radish Crop",
+  "block.tutorialmod.goji_berry_bush": "Goji Berry Bush",
+
   "creativetab.tutorialmod.tutorial_items": "Tutorial Items",
   "creativetab.tutorialmod.tutorial_blocks": "Tutorial Blocks",
 
@@ -53,7 +69,17 @@
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more information",
   "tooltip.tutorialmod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
 
-
   "trim_pattern.tutorialmod.ovco": "Ovco Armor Trim",
-  "trim_material.tutorialmod.bismuth": "Bismuth Material"
+  "trim_material.tutorialmod.bismuth": "Bismuth Material",
+
+  "effect.tutorialmod.slimey": "Slimey",
+
+  "painting.tutorialmod.world.title": "World",
+  "painting.tutorialmod.world.author": "NanoAttack",
+  "painting.tutorialmod.shrimp.title": "Shrimp",
+  "painting.tutorialmod.shrimp.author": "NanoAttack",
+  "painting.tutorialmod.saw_them.title": "Saw Them",
+  "painting.tutorialmod.saw_them.author": "NanoAttack",
+
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker"
 }

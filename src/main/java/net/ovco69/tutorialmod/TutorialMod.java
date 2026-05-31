@@ -5,8 +5,12 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.ovco69.tutorialmod.block.ModBlocks;
 import net.ovco69.tutorialmod.component.ModDataComponents;
+import net.ovco69.tutorialmod.effect.ModEffects;
+import net.ovco69.tutorialmod.enchantment.ModEnchantmentEffects;
 import net.ovco69.tutorialmod.item.ModCreativeModeTabs;
 import net.ovco69.tutorialmod.item.ModItems;
+import net.ovco69.tutorialmod.potion.ModPotions;
+import net.ovco69.tutorialmod.sound.ModSounds;
 import net.ovco69.tutorialmod.util.ModItemProperties;
 import org.slf4j.Logger;
 
@@ -53,6 +57,13 @@ public class TutorialMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModDataComponents.register(modEventBus);
+
+        ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+
+        ModPotions.register(modEventBus);
+
+        ModEnchantmentEffects.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

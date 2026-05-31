@@ -58,8 +58,5 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.BISMUTH.get());
         tag(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.OVCO_SMITHING_TEMPLATE.get());
-
-        tag(Tags.Items.RANGED_WEAPON_TOOLS)
-                .add(ModItems.BISMUTH_BOW.get());
     }
 }

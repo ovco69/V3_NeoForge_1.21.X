@@ -7,9 +7,11 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ovco69.tutorialmod.TutorialMod;
+import net.ovco69.tutorialmod.block.ModBlocks;
 import net.ovco69.tutorialmod.item.custom.ChiselItem;
 import net.ovco69.tutorialmod.item.custom.HammerItem;
 import net.ovco69.tutorialmod.item.custom.ModArmorItem;
+import net.ovco69.tutorialmod.sound.ModSounds;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
@@ -84,6 +86,17 @@ public class ModItems {
     public static final DeferredItem<Item> BISMUTH_BOW = ITEMS.register("bismuth_bow",
             () -> new BowItem(new Item.Properties()
                     .durability(500)));
+
+    public static final DeferredItem<Item> ARTIST_BLOCK_MUSIC_DISC = ITEMS.register("artist_block_music_disc",
+            () -> new Item(new Item.Properties()
+                    .jukeboxPlayable(ModSounds.ARTIST_BLOCK_KEY)
+                    .stacksTo(1)));
+
+    public static final DeferredItem<Item> RADISH_SEEDS = ITEMS.register("radish_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RADISH_CROP.get(), new Item.Properties()));
+    public static final DeferredItem<Item> GOJI_BERRIES = ITEMS.register("goji_berries",
+            () -> new ItemNameBlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), new Item.Properties()
+                    .food(ModFoodProperties.GOJI_BERRY)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

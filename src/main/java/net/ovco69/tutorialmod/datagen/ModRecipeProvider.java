@@ -89,16 +89,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         trimSmithing(recipeOutput, ModItems.OVCO_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "ovco"));
 
-        bowItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_BOW, ModItems.BISMUTH.get());
+        bowItem(recipeOutput, RecipeCategory.COMBAT, ModItems.BISMUTH_BOW, ModItems.BISMUTH.get(), Items.STRING);
     }
 
-    private void bowItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike bow, ItemLike material) {
+    private void bowItem(RecipeOutput recipeOutput, RecipeCategory recipeCategory, ItemLike bow, ItemLike material, ItemLike stringMaterial) {
         ShapedRecipeBuilder.shaped(recipeCategory, bow)
                 .pattern(" BS")
                 .pattern("B S")
                 .pattern(" BS")
                 .define('B', material)
-                .define('S', Items.STRING)
+                .define('S', stringMaterial)
                 .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
                 .save(recipeOutput);
     }
@@ -143,7 +143,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', material)
-                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(material.asItem()).getPath(), has(material))
+                .unlockedBy("has_bismuth", has(ModItems.BISMUTH.get()))
                 .save(recipeOutput);
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

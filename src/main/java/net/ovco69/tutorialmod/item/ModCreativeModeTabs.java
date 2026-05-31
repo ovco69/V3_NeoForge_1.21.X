@@ -46,6 +46,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.OVCO_SMITHING_TEMPLATE);
 
                         output.accept(ModItems.BISMUTH_BOW);
+
+                        output.accept(ModItems.ARTIST_BLOCK_MUSIC_DISC);
+
+                        output.accept(ModItems.RADISH_SEEDS);
+                        output.accept(ModItems.GOJI_BERRIES);
                     })
                     .build());
 

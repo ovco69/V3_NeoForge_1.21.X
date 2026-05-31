@@ -69,6 +69,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.BISMUTH_HORSE_ARMOR.get());
         basicItem(ModItems.OVCO_SMITHING_TEMPLATE.get());
+
+        basicItem(ModItems.ARTIST_BLOCK_MUSIC_DISC.get());
+
+        basicItem(ModItems.RADISH_SEEDS.get());
+        basicItem(ModItems.GOJI_BERRIES.get());
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

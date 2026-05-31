@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.tutorialmod.artist_block_music_disc.desc"
+  },
+  "length_in_seconds": 232,
+  "sound_event": "tutorialmod:artist_block"
+}
