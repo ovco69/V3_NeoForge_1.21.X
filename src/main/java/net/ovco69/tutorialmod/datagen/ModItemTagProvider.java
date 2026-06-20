@@ -3,12 +3,14 @@ package net.ovco69.tutorialmod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.ovco69.tutorialmod.TutorialMod;
+import net.ovco69.tutorialmod.block.ModBlocks;
 import net.ovco69.tutorialmod.item.ModItems;
 import net.ovco69.tutorialmod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
@@ -58,5 +60,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.BISMUTH.get());
         tag(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.OVCO_SMITHING_TEMPLATE.get());
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLOODWOOD_LOG.get().asItem())
+                .add(ModBlocks.BLOODWOOD_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_BLOODWOOD_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get().asItem());
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.BLOODWOOD_PLANKS.get().asItem());
     }
 }

@@ -23,6 +23,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_BLOCK.get())
                 .add(ModBlocks.BISMUTH_ORE.get())
                 .add(ModBlocks.DEEPSLATE_BISMUTH_ORE.get())
+                .add(ModBlocks.NETHER_BISMUTH_ORE.get())
+                .add(ModBlocks.END_BISMUTH_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.BISMUTH_STAIRS.get())
                 .add(ModBlocks.BISMUTH_SLAB.get())
@@ -39,6 +41,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_BLOCK.get())
                 .add(ModBlocks.BISMUTH_ORE.get())
                 .add(ModBlocks.DEEPSLATE_BISMUTH_ORE.get())
+                .add(ModBlocks.NETHER_BISMUTH_ORE.get())
+                .add(ModBlocks.END_BISMUTH_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.BISMUTH_STAIRS.get())
                 .add(ModBlocks.BISMUTH_SLAB.get())
@@ -68,5 +72,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_BISMUTH_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .remove(ModTags.Blocks.NEEDS_BISMUTH_TOOL);
+
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLOODWOOD_LOG.get())
+                .add(ModBlocks.BLOODWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_BLOODWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get());
     }
 }

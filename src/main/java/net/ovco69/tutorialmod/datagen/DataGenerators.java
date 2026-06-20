@@ -11,6 +11,7 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.ovco69.tutorialmod.TutorialMod;
+import net.ovco69.tutorialmod.worldgen.dimension.ModDimensions;
 
 import java.util.Collections;
 import java.util.List;

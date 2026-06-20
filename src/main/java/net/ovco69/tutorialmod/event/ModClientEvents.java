@@ -10,7 +10,6 @@ import net.ovco69.tutorialmod.item.ModItems;
 
 @EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
 public class ModClientEvents {
-
     @SubscribeEvent
     public static void onComputeFovModifierEvent(ComputeFovModifierEvent event) {
         if (event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == ModItems.BISMUTH_BOW.get()) {

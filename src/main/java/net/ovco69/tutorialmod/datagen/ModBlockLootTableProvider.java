@@ -40,6 +40,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get()));
         add(ModBlocks.DEEPSLATE_BISMUTH_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get(), 2, 5));
+        add(ModBlocks.NETHER_BISMUTH_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.NETHER_BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get(), 2, 5));
+        add(ModBlocks.END_BISMUTH_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.END_BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get(), 2, 5));
 
         dropSelf(ModBlocks.BISMUTH_STAIRS.get());
         add(ModBlocks.BISMUTH_SLAB.get(),
@@ -80,6 +84,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         ).add(LootItem.lootTableItem(ModItems.GOJI_BERRIES.get()))
                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
                 .apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE)))));
+
+        dropSelf(ModBlocks.BLOODWOOD_LOG.get());
+        dropSelf(ModBlocks.BLOODWOOD_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_BLOODWOOD_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get());
+        dropSelf(ModBlocks.BLOODWOOD_PLANKS.get());
+        dropSelf(ModBlocks.BLOODWOOD_SAPLING.get());
+
+        add(ModBlocks.BLOODWOOD_LEAVES.get(),
+                block -> createLeavesDrops(block, ModBlocks.BLOODWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)) ;
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

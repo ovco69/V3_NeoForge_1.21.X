@@ -28,7 +28,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> BISMUTH_SMELTABLES = List.of(
                 ModItems.RAW_BISMUTH,
                 ModBlocks.BISMUTH_ORE,
-                ModBlocks.DEEPSLATE_BISMUTH_ORE
+                ModBlocks.DEEPSLATE_BISMUTH_ORE,
+                ModBlocks.NETHER_BISMUTH_ORE,
+                ModBlocks.END_BISMUTH_ORE
         );
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BISMUTH_BLOCK.get())

@@ -4,13 +4,16 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ovco69.tutorialmod.TutorialMod;
 import net.ovco69.tutorialmod.block.ModBlocks;
+import net.ovco69.tutorialmod.entity.ModEntities;
 import net.ovco69.tutorialmod.item.custom.ChiselItem;
 import net.ovco69.tutorialmod.item.custom.HammerItem;
 import net.ovco69.tutorialmod.item.custom.ModArmorItem;
+import net.ovco69.tutorialmod.item.custom.TomahawkItem;
 import net.ovco69.tutorialmod.sound.ModSounds;
 
 public class ModItems {
@@ -97,6 +100,18 @@ public class ModItems {
     public static final DeferredItem<Item> GOJI_BERRIES = ITEMS.register("goji_berries",
             () -> new ItemNameBlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), new Item.Properties()
                     .food(ModFoodProperties.GOJI_BERRY)));
+
+    public static final DeferredItem<Item> GECKO_SPAWN_EGG = ITEMS.register("gecko_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.GECKO, 0x31afaf, 0xffac00,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> TOMAHAWK = ITEMS.register("tomahawk",
+            () -> new TomahawkItem(new Item.Properties()
+                    .stacksTo(16)));
+
+    public static final DeferredItem<Item> RADIATION_STAFF = ITEMS.register("radiation_staff",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,8 +1,11 @@
 package net.ovco69.tutorialmod.datagen;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -28,6 +31,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BISMUTH_BLOCK);
         blockWithItem(ModBlocks.BISMUTH_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_BISMUTH_ORE);
+        blockWithItem(ModBlocks.NETHER_BISMUTH_ORE);
+        blockWithItem(ModBlocks.END_BISMUTH_ORE);
         blockWithItem(ModBlocks.MAGIC_BLOCK);
 
         stairsBlock(ModBlocks.BISMUTH_STAIRS.get(), blockTexture(ModBlocks.BISMUTH_BLOCK.get()));
@@ -57,7 +62,36 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLamp();
         makeCrop((CropBlock) ModBlocks.RADISH_CROP.get(), "radish_crop_stage", "radish_crop_stage");
         makeBush((SweetBerryBushBlock) ModBlocks.GOJI_BERRY_BUSH.get(), "goji_berry_bush_stage", "goji_berry_bush_stage");
+
+        logBlock((RotatedPillarBlock) ModBlocks.BLOODWOOD_LOG.get());
+        logBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLOODWOOD_LOG.get());
+        axisBlock((RotatedPillarBlock) ModBlocks.BLOODWOOD_WOOD.get(),
+                blockTexture(ModBlocks.BLOODWOOD_LOG.get()), blockTexture(ModBlocks.BLOODWOOD_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLOODWOOD_WOOD.get(),
+                blockTexture(ModBlocks.STRIPPED_BLOODWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_BLOODWOOD_LOG.get()));
+
+        blockItem(ModBlocks.BLOODWOOD_LOG);
+        blockItem(ModBlocks.BLOODWOOD_WOOD);
+        blockItem(ModBlocks.STRIPPED_BLOODWOOD_LOG);
+        blockItem(ModBlocks.STRIPPED_BLOODWOOD_WOOD);
+        blockWithItem(ModBlocks.BLOODWOOD_PLANKS);
+
+        saplingBlock(ModBlocks.BLOODWOOD_SAPLING);
+        leavesBlock(ModBlocks.BLOODWOOD_LEAVES);
     }
+
+    private void saplingBlock(DeferredBlock<Block> block) {
+        simpleBlock(block.get(),
+                models().cross(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), blockTexture(block.get()))
+                        .renderType("cutout"));
+    }
+    private void leavesBlock(DeferredBlock<Block> block) {
+        simpleBlockWithItem(block.get(),
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(block.get()))
+                        .renderType("cutout"));
+    }
+
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
 

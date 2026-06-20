@@ -1,5 +1,6 @@
 package net.ovco69.tutorialmod.event;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -7,26 +8,34 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.ItemEntityPickupEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import net.neoforged.neoforge.event.village.WandererTradesEvent;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.wrapper.PlayerMainInvWrapper;
 import net.ovco69.tutorialmod.TutorialMod;
 import net.ovco69.tutorialmod.item.ModItems;
 import net.ovco69.tutorialmod.item.custom.HammerItem;
 import net.ovco69.tutorialmod.potion.ModPotions;
+import net.ovco69.tutorialmod.villager.ModVillagers;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
@@ -80,37 +89,72 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public static void onItemPickupEvent(ItemEntityPickupEvent.Pre event) {
-        ItemStack pickedItem = event.getItemEntity().getItem();
-        ItemStack playerItem = findItemInInventory(event.getPlayer(), pickedItem);
+    public static void addCustomTrades(VillagerTradesEvent event) {
+        if (event.getType() == VillagerProfession.FARMER) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-        if (playerItem == null || !playerItem.isDamageableItem())
-            return;
-        if (!pickedItem.isDamageableItem() || pickedItem.isDamaged())
-            return;
+            trades.get(1).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 3),
+                    new ItemStack(ModItems.GOJI_BERRIES.get(), 18),
+                    6,
+                    3,
+                    0.05f
+                    ));
+            trades.get(1).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.DIAMOND, 7),
+                    new ItemStack(ModItems.RADISH.get(), 3),
+                    6,
+                    3,
+                    0.05f
+                    ));
 
-        int max = playerItem.getMaxDamage();
+            trades.get(2).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.ENDER_PEARL, 1),
+                    new ItemStack(ModItems.RADISH_SEEDS.get(), 1),
+                    2,
+                    3,
+                    0.05f
+                    ));
+        }
+        if (event.getType() == ModVillagers.KAUPENGER.value()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-        int remainingPlayer = max - playerItem.getDamageValue();
-        int remainingPicked = max - pickedItem.getDamageValue();
-        int combined = Math.min(max, remainingPlayer + remainingPicked);
+            trades.get(1).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.NETHERITE_INGOT, 3),
+                    new ItemStack(ModItems.RADIATION_STAFF.get(), 1),
+                    1,
+                    4,
+                    0.05f
+            ));
+            trades.get(1).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 3),
+                    new ItemStack(ModItems.RAW_BISMUTH.get(), 8),
+                    7,
+                    3,
+                    0.05f
+            ));
 
-        int newDamage = max - combined;
-
-        playerItem.setDamageValue(newDamage);
-        pickedItem.setCount(0);
+            trades.get(2).add((trader, random) -> new MerchantOffer(
+                    new ItemCost(ModItems.BISMUTH.get(), 57),
+                    new ItemStack(Items.MACE, 1),
+                    3,
+                    6,
+                    0.05f
+            ));
+        }
     }
 
-    private static ItemStack findItemInInventory(Player player, ItemStack targetItem) {
-        IItemHandler inventory = new PlayerMainInvWrapper(player.getInventory());
+    @SubscribeEvent
+    public static void addWanderingTrades(WandererTradesEvent event) {
+        List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
+        List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
-        for (int i = 0; i < inventory.getSlots(); i++) {
-            ItemStack stack = inventory.getStackInSlot(i);
-
-            if (!stack.isEmpty() && stack.getItem() == targetItem.getItem())
-                return stack;
-        }
-
-        return null;
+        genericTrades.add((trader, random) -> new MerchantOffer(
+                new ItemCost(Items.EMERALD, 8),
+                new ItemStack(ModItems.STARLIGHT_ASHES.get(), 3),
+                2,
+                3,
+                0.05f
+        ));
     }
 }

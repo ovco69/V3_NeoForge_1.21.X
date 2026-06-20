@@ -74,6 +74,17 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.RADISH_SEEDS.get());
         basicItem(ModItems.GOJI_BERRIES.get());
+
+        saplingItem(ModBlocks.BLOODWOOD_SAPLING);
+
+        withExistingParent(ModItems.GECKO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture(
+                        "layer0", ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + item.getId().getPath())
+        );
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
