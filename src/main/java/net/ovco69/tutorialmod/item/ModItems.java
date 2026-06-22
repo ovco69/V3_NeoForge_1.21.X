@@ -1,6 +1,5 @@
 package net.ovco69.tutorialmod.item;
 
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
@@ -112,6 +111,9 @@ public class ModItems {
     public static final DeferredItem<Item> RADIATION_STAFF = ITEMS.register("radiation_staff",
             () -> new Item(new Item.Properties()
                     .stacksTo(1)));
+
+//    public static final DeferredItem<Item> SCYTHE_OF_SHADOWS = ITEMS.register("scythe_of_shadows",
+//            () -> );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -4,6 +4,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.ovco69.tutorialmod.block.ModBlocks;
 import net.ovco69.tutorialmod.component.ModDataComponents;
 import net.ovco69.tutorialmod.effect.ModEffects;
@@ -14,6 +15,9 @@ import net.ovco69.tutorialmod.entity.client.GeckoRenderer;
 import net.ovco69.tutorialmod.entity.client.TomahawkProjectileRenderer;
 import net.ovco69.tutorialmod.item.ModCreativeModeTabs;
 import net.ovco69.tutorialmod.item.ModItems;
+import net.ovco69.tutorialmod.loot.ModLootModifiers;
+import net.ovco69.tutorialmod.particle.BismuthParticles;
+import net.ovco69.tutorialmod.particle.ModParticles;
 import net.ovco69.tutorialmod.potion.ModPotions;
 import net.ovco69.tutorialmod.sound.ModSounds;
 import net.ovco69.tutorialmod.util.ModItemProperties;
@@ -59,6 +63,10 @@ public class TutorialMod {
         ModEntities.register(modEventBus);
         ModVillagers.register(modEventBus);
 
+        ModParticles.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -87,6 +95,11 @@ public class TutorialMod {
             EntityRenderers.register(ModEntities.CHAIR_ENTITY.get(), ChairRenderer::new);
 
             event.enqueueWork(ModPortals::registerPortals);
+        }
+
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.BISMUTH_PARTICLES.get(), BismuthParticles.Provider::new);
         }
     }
 }
