@@ -47,10 +47,10 @@ repositories {
 //    }
 
     // Foundry Veil
-//    maven {
-//        name = 'BlameJared Maven (CrT / Bookshelf)'
-//        url = 'https://maven.blamejared.com'
-//    }
+    maven {
+        name = 'BlameJared Maven (CrT / Bookshelf)'
+        url = 'https://maven.blamejared.com'
+    }
 //
     // Forge Config API Port
 //    maven {
@@ -180,10 +180,10 @@ dependencies {
 //
 //    api("dev.ryanhcode.sable:sable-common-${project.minecraft_version}:${project.sable_version}")
 
-//    implementation("foundry.veil:veil-neoforge-${project.minecraft_version}:${project.veil_version}") {
-//        exclude group: "maven.modrinth"
-//        exclude group: "me.fallenbreath"
-//    }
+    implementation("foundry.veil:veil-neoforge-${project.minecraft_version}:${project.veil_version}") {
+        exclude group: "maven.modrinth"
+        exclude group: "me.fallenbreath"
+    }
 
     // Create
 //    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }

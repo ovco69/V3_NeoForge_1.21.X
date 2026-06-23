@@ -1,0 +1,8 @@
+{
+  "asset_id": "omnigear:ovco",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.omnigear.ovco"
+  },
+  "template_item": "omnigear:ovco_armor_trim_smithing_template"
+}

@@ -1,12 +1,12 @@
 {
   "values": {
-    "tutorialmod:goji_berries": {
+    "omnigear:goji_berries": {
       "chance": 0.3
     },
-    "tutorialmod:radish": {
+    "omnigear:radish": {
       "chance": 0.45
     },
-    "tutorialmod:radish_seeds": {
+    "omnigear:radish_seeds": {
       "chance": 0.25
     }
   }

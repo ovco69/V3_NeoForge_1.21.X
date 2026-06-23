@@ -1,20 +1,20 @@
 {
   "values": [
-    "tutorialmod:bismuth_block",
-    "tutorialmod:bismuth_ore",
-    "tutorialmod:deepslate_bismuth_ore",
-    "tutorialmod:nether_bismuth_ore",
-    "tutorialmod:end_bismuth_ore",
-    "tutorialmod:magic_block",
-    "tutorialmod:bismuth_stairs",
-    "tutorialmod:bismuth_slab",
-    "tutorialmod:bismuth_pressure_plate",
-    "tutorialmod:bismuth_button",
-    "tutorialmod:bismuth_fence",
-    "tutorialmod:bismuth_fence_gate",
-    "tutorialmod:bismuth_wall",
-    "tutorialmod:bismuth_door",
-    "tutorialmod:bismuth_trapdoor",
-    "tutorialmod:bismuth_lamp"
+    "omnigear:bismuth_block",
+    "omnigear:bismuth_ore",
+    "omnigear:deepslate_bismuth_ore",
+    "omnigear:nether_bismuth_ore",
+    "omnigear:end_bismuth_ore",
+    "omnigear:magic_block",
+    "omnigear:bismuth_stairs",
+    "omnigear:bismuth_slab",
+    "omnigear:bismuth_pressure_plate",
+    "omnigear:bismuth_button",
+    "omnigear:bismuth_fence",
+    "omnigear:bismuth_fence_gate",
+    "omnigear:bismuth_wall",
+    "omnigear:bismuth_door",
+    "omnigear:bismuth_trapdoor",
+    "omnigear:bismuth_lamp"
   ]
 }

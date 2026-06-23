@@ -1,0 +1,6 @@
+{
+  "parent": "omnigear:item/bismuth_bow",
+  "textures": {
+    "layer0": "omnigear:item/bismuth_bow_pulling_1"
+  }
+}

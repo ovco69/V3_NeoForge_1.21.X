@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "omnigear:block/bismuth_block",
+    "side": "omnigear:block/bismuth_block",
+    "top": "omnigear:block/bismuth_block"
+  }
+}

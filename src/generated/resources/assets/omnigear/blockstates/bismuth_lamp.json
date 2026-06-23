@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "omnigear:block/bismuth_lamp_off"
+    },
+    "clicked=true": {
+      "model": "omnigear:block/bismuth_lamp_on"
+    }
+  }
+}

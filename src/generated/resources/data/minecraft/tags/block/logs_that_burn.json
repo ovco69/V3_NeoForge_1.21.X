@@ -1,8 +1,8 @@
 {
   "values": [
-    "tutorialmod:bloodwood_log",
-    "tutorialmod:bloodwood_wood",
-    "tutorialmod:stripped_bloodwood_log",
-    "tutorialmod:stripped_bloodwood_wood"
+    "omnigear:bloodwood_log",
+    "omnigear:bloodwood_wood",
+    "omnigear:stripped_bloodwood_log",
+    "omnigear:stripped_bloodwood_wood"
   ]
 }

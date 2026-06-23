@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "omnigear:item/chisel"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "omnigear:used": 1
+      },
+      "model": "omnigear:item/chisel_used"
+    }
+  ]
+}

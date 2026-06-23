@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "bismuth",
+  "ingredients": [
+    {
+      "item": "omnigear:bismuth"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "omnigear:bismuth_button"
+  }
+}

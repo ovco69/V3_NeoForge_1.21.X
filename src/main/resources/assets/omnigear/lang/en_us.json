@@ -1,0 +1,114 @@
+{
+  "item.omnigear.bismuth": "Bismuth",
+  "item.omnigear.raw_bismuth": "Raw Bismuth",
+
+  "item.omnigear.chisel": "Chisel",
+
+  "item.omnigear.radish": "Radish",
+  "item.omnigear.starlight_ashes": "Starlight Ashes",
+  "item.omnigear.frostfire_ice": "Frostfire Ice",
+
+  "item.omnigear.bismuth_sword": "Bismuth Sword",
+  "item.omnigear.bismuth_pickaxe": "Bismuth Pickaxe",
+  "item.omnigear.bismuth_axe": "Bismuth Axe",
+  "item.omnigear.bismuth_shovel": "Bismuth Shovel",
+  "item.omnigear.bismuth_hoe": "Bismuth Hoe",
+  "item.omnigear.bismuth_hammer": "Bismuth Hammer",
+
+  "item.omnigear.bismuth_helmet": "Bismuth Helmet",
+  "item.omnigear.bismuth_chestplate": "Bismuth Chestplate",
+  "item.omnigear.bismuth_leggings": "Bismuth Leggings",
+  "item.omnigear.bismuth_boots": "Bismuth Boots",
+
+  "item.omnigear.bismuth_horse_armor": "Bismuth Horse Armor",
+  "item.omnigear.ovco_armor_trim_smithing_template": "Smithing Template",
+
+  "item.omnigear.bismuth_bow": "Bismuth Bow",
+
+  "item.omnigear.radish_seeds": "Radish Seeds",
+  "item.omnigear.goji_berries": "Goji Berries",
+
+  "item.minecraft.potion.effect.slimey_potion": "Potion of Slimey",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Splash Potion of Slimey",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Lingering Potion of Slimey",
+  "item.minecraft.potion.effect.slimey_potion_extended": "Potion of Slimey",
+  "item.minecraft.splash_potion.effect.slimey_potion_extended": "Splash Potion of Slimey",
+  "item.minecraft.lingering_potion.effect.slimey_potion_extended": "Lingering Potion of Slimey",
+
+  "item.omnigear.artist_block_music_disc": "Music Disc",
+  "item.omnigear.artist_block_music_disc.desc": "St4ticFilms - Artist Block",
+
+  "item.omnigear.gecko_spawn_egg": "Gecko Spawn Egg",
+
+  "item.omnigear.tomahawk": "Tomahawk",
+  "item.omnigear.radiation_staff": "Radiation Staff",
+
+  "item.omnigear.scythe_of_shadows": "Scythe of Shadows",
+
+  "block.omnigear.bismuth_block": "Block of Bismuth",
+  "block.omnigear.bismuth_ore": "Bismuth Ore",
+  "block.omnigear.deepslate_bismuth_ore": "Deepslate Bismuth Ore",
+  "block.omnigear.nether_bismuth_ore": "Nether Bismuth Ore",
+  "block.omnigear.end_bismuth_ore": "End Bismuth Ore",
+
+  "block.omnigear.bloodwood_log": "Bloodwood Log",
+  "block.omnigear.stripped_bloodwood_log": "Stripped Bloodwood Log",
+  "block.omnigear.bloodwood_wood": "Bloodwood Wood",
+  "block.omnigear.stripped_bloodwood_wood": "Stripped Bloodwood Wood",
+  "block.omnigear.bloodwood_planks": "Bloodwood Planks",
+  "block.omnigear.bloodwood_leaves": "Bloodwood Leaves",
+  "block.omnigear.bloodwood_sapling": "Bloodwood Sapling",
+
+  "block.omnigear.bismuth_stairs": "Bismuth Stairs",
+  "block.omnigear.bismuth_slab": "Bismuth Slab",
+
+  "block.omnigear.bismuth_pressure_plate": "Bismuth Pressure Plate",
+  "block.omnigear.bismuth_button": "Bismuth Button",
+
+  "block.omnigear.bismuth_fence": "Bismuth Fence",
+  "block.omnigear.bismuth_fence_gate": "Bismuth Fence Gate",
+  "block.omnigear.bismuth_wall": "Bismuth Wall",
+
+  "block.omnigear.bismuth_door": "Bismuth Door",
+  "block.omnigear.bismuth_trapdoor": "Bismuth Trapdoor",
+
+  "block.omnigear.magic_block": "Magic Block",
+
+  "block.omnigear.bismuth_lamp": "Bismuth Lamp",
+
+  "block.omnigear.radish_crop": "Radish Crop",
+  "block.omnigear.goji_berry_bush": "Goji Berry Bush",
+
+  "block.omnigear.chair": "Chair",
+  "block.omnigear.pedestal": "Pedestal",
+
+  "creativetab.omnigear.tutorial_items": "Tutorial Items",
+  "creativetab.omnigear.tutorial_blocks": "Tutorial Blocks",
+
+  "tooltip.omnigear.magic_block": "This block is very §9MAGICAL§r",
+  "tooltip.omnigear.chisel": "Press §eShift§r for more information",
+  "tooltip.omnigear.chisel.shift_down": "This Item can chisel Blocks into Bricks",
+
+  "trim_pattern.omnigear.ovco": "Ovco Armor Trim",
+  "trim_material.omnigear.bismuth": "Bismuth Material",
+
+  "effect.omnigear.slimey": "Slimey",
+
+  "painting.omnigear.world.title": "World",
+  "painting.omnigear.world.author": "NanoAttack",
+  "painting.omnigear.shrimp.title": "Shrimp",
+  "painting.omnigear.shrimp.author": "NanoAttack",
+  "painting.omnigear.saw_them.title": "Saw Them",
+  "painting.omnigear.saw_them.author": "NanoAttack",
+
+  "enchantment.omnigear.lightning_striker": "Lightning Striker",
+
+  "entity.omnigear.gecko": "Gecko",
+  "entity.omnigear.tomahawk": "Tomahawk",
+  "entity.minecraft.villager.omnigear.kaupenger": "Kaupenger",
+
+  "tooltip.omnigear.scythe_of_shadows.tooltip1": "In the realm of Eldoria, where mortals and deities once intertwined, power is a double-edged sword.",
+  "tooltip.omnigear.scythe_of_shadows.tooltip2": "Legends whisper of a scythe — a weapon of untold might — bestowed upon a mortal by the enigmatic deity Nyx, the Goddess of Shadows.",
+  "tooltip.omnigear.scythe_of_shadows.tooltip3": "This scythe, known as the Scythe of Shadows, holds the ability to harvest not just lives, but the very essence of souls, granting its wielder immense power.",
+  "tooltip.omnigear.scythe_of_shadows.tooltip4": "However, the scythe is cursed, binding its user to darkness and corruption, feeding on their deepest desires and fears."
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "omnigear:block/bismuth_slab"
+    },
+    "type=double": {
+      "model": "omnigear:block/bismuth_block"
+    },
+    "type=top": {
+      "model": "omnigear:block/bismuth_slab_top"
+    }
+  }
+}

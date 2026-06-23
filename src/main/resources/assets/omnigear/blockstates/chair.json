@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "omnigear:block/chair"
+    },
+    "facing=south": {
+      "model": "omnigear:block/chair",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "omnigear:block/chair",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "omnigear:block/chair",
+      "y": 270
+    }
+  }
+}

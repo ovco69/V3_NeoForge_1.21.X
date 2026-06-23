@@ -1,0 +1,46 @@
+{
+  "chisel_use": {
+    "subtitle": "sounds.omnigear.chisel_use",
+    "sounds": [
+      "omnigear:chisel_use"
+    ]
+  },
+  "magic_block_break": {
+    "subtitle": "sounds.omnigear.magic_block_break",
+    "sounds": [
+      "omnigear:magic_block_break"
+    ]
+  },
+  "magic_block_step": {
+    "subtitle": "sounds.omnigear.magic_block_step",
+    "sounds": [
+      "omnigear:magic_block_step"
+    ]
+  },
+  "magic_block_place": {
+    "subtitle": "sounds.omnigear.magic_block_place",
+    "sounds": [
+      "omnigear:magic_block_place"
+    ]
+  },
+  "magic_block_hit": {
+    "subtitle": "sounds.omnigear.magic_block_hit",
+    "sounds": [
+      "omnigear:magic_block_hit"
+    ]
+  },
+  "magic_block_fall": {
+    "subtitle": "sounds.omnigear.magic_block_fall",
+    "sounds": [
+      "omnigear:magic_block_fall"
+    ]
+  },
+  "artist_block": {
+    "sounds": [
+      {
+        "name": "omnigear:artist_block",
+        "stream": true
+      }
+    ]
+  }
+}

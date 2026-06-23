@@ -1,8 +1,8 @@
 {
   "values": [
-    "tutorialmod:bismuth_helmet",
-    "tutorialmod:bismuth_chestplate",
-    "tutorialmod:bismuth_leggings",
-    "tutorialmod:bismuth_boots"
+    "omnigear:bismuth_helmet",
+    "omnigear:bismuth_chestplate",
+    "omnigear:bismuth_leggings",
+    "omnigear:bismuth_boots"
   ]
 }

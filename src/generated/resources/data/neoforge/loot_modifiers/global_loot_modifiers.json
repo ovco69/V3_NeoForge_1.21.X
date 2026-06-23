@@ -1,9 +1,9 @@
 {
   "entries": [
-    "tutorialmod:radish_seeds_to_short_grass",
-    "tutorialmod:radish_seeds_to_tall_grass",
-    "tutorialmod:chisel_from_jungle_temple",
-    "tutorialmod:goji_berry_from_creeper"
+    "omnigear:radish_seeds_to_short_grass",
+    "omnigear:radish_seeds_to_tall_grass",
+    "omnigear:chisel_from_jungle_temple",
+    "omnigear:goji_berry_from_creeper"
   ],
   "replace": false
 }
